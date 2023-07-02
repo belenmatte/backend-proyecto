@@ -16,7 +16,7 @@ function generateRandomPositions(count) {
   return positions;
 }
 
-router.post('start', '/', async (ctx) => {
+router.post('game', '/', async (ctx) => {
   try {
     const { id_user } = ctx.request.body;
 
