@@ -9,7 +9,10 @@ const app = new Koa();
 
 app.context.orm = orm;
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3001', // Reemplaza con la URL y el puerto correctos del frontend
+  credentials: true // Si estás enviando solicitudes con credenciales (cookies, encabezados de autenticación, etc.)
+}));
 app.use(KoaLogger());
 app.use(koaBody());
 

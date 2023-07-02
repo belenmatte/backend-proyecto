@@ -1,6 +1,6 @@
 const Router = require('koa-router');
 const users = require('./routes/users');
-const game = require('./routes/game');
+const start = require('./routes/start');
 const turno = require('./routes/turno');
 const update = require('./routes/update');
 const authRoutes = require('./routes/authentication');
@@ -13,7 +13,7 @@ dotenv.config();
 
 const router = new Router();
 
-router.use('/game', game.routes());
+router.use('/start', start.routes());
 router.use('/turno', turno.routes());
 router.use('/update', update.routes());
 router.use('/board', board.routes());
